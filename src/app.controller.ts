@@ -7,6 +7,7 @@ export class AppController {
 
   @Post()
   async postProductInformation(@Body() trainingData: any): Promise<string> {
+    console.log(trainingData);
     trainingData = JSON.stringify(trainingData);
     return await this.appService.postProductInformation(trainingData);
   }
