@@ -1,7 +1,7 @@
 {
   "name": "nsbe_hacks_202",
   "version": "0.0.1",
-  "description": "",
+  "description": "NSBE Hacks 2024 Project",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
@@ -66,5 +66,9 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
   }
 }
