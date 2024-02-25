@@ -13,6 +13,7 @@ const cohere = new CohereClient({
 @Injectable()
 export class AppService {
   async postProductInformation(trainingData: string): Promise<string> {
+    console.log(trainingData);
     const customerQuestion = 'how much can I buy this for?';
     const response = await cohere.generate({
       model: 'command',
@@ -20,7 +21,7 @@ export class AppService {
         'I am providing you some training data and then a customer question, use the training data to learn about the product and then  answer the customers question using that data' +
         `Training Data: ${trainingData}` +
         `Customer Question: ${customerQuestion}`, // Combine user question with retrieved QA as context
-      maxTokens: 50,
+      maxTokens: 100,
       temperature: 0.5,
     });
     console.log(response);
